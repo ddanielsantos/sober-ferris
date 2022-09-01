@@ -1,4 +1,4 @@
 -- This file should undo anything in `up.sql`
 
-DROP EXTENSION postgis;
-DROP EXTENSION postgis_topology;
+DROP EXTENSION IF EXISTS postgis cascade;
+DROP EXTENSION IF EXISTS postgis_topology cascade;
