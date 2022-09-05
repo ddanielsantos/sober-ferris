@@ -1,11 +1,10 @@
+pub mod schema;
+pub mod entities;
+
 use std::env;
 use dotenvy::dotenv;
 use diesel::{PgConnection, Connection};
-use crate::routes::partner::partner_by_id;
-
-pub mod routes;
-pub mod models;
-pub mod schema;
+use entities::partner::routes as partner;
 
 #[macro_use] extern crate rocket;
 
@@ -26,7 +25,9 @@ fn index() -> &'static str {
 
 #[launch]
 fn rocket() -> _ {
+    let partner_routes= routes![partner::partner_by_id];
+
     rocket::build()
         .mount("/", routes![index])
-        .mount("/partner", routes![partner_by_id])
+        .mount("/partner", partner_routes)
 }
