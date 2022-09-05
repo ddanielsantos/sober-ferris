@@ -1,4 +1,4 @@
-use diesel::prelude::*;
+use diesel::Queryable;
 use rocket::serde::Serialize;
 
 #[derive(Queryable, Serialize, Debug)]
