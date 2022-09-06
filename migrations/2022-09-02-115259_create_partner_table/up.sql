@@ -2,7 +2,7 @@
 
 CREATE TABLE partner (
   id            VARCHAR (36) PRIMARY KEY,
-  tradingName   VARCHAR (256) NOT NULL,
-  ownerName     VARCHAR (256) NOT NULL,
+  trading_name  VARCHAR (256) NOT NULL,
+  owner_name    VARCHAR (256) NOT NULL,
   document      VARCHAR (256) NOT NULL
 );

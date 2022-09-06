@@ -3,8 +3,8 @@
 diesel::table! {
     partner (id) {
         id -> Varchar,
-        tradingname -> Varchar,
-        ownername -> Varchar,
+        trading_name -> Varchar,
+        owner_name -> Varchar,
         document -> Varchar,
     }
 }
