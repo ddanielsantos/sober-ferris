@@ -1,5 +1,6 @@
 pub mod schema;
 pub mod entities;
+pub mod types;
 
 use std::env;
 use dotenvy::dotenv;
